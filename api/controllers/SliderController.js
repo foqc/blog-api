@@ -81,7 +81,7 @@ exports.delete_a_slider = function (req, res) {
             res.status(500).json({ errors: { global: err.message } });
         else if (slider) {
             // deleteFile(slider.sliderImage);
-            Slider.remove({ _id: req.params.sliderId }, (error) => {
+            Slider.deleteOne({ _id: req.params.sliderId }, (error) => {
                 if (error)
                     res.status(500).json({ errors: { global: error.message } });
                 res.json({ message: 'Slider successfully deleted' });
