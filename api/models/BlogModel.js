@@ -5,7 +5,8 @@ const Schema = mongoose.Schema;
 const BlogSchema = Schema({
     title: {
         type: String,
-        required: 'Title is required'
+        required: 'Title is required',
+        unique: true
     },
     category: {
         type: String,
@@ -36,7 +37,7 @@ const BlogSchema = Schema({
             type: String,
             required: 'username, is required'
         },
-        profileImage:{
+        profileImage: {
             type: String,
             required: false
         },
