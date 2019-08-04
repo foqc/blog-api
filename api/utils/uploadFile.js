@@ -28,7 +28,7 @@ const upload = multer({
         cb(null, {fieldName: `foqc_${file.fieldname}`});
       },
       key: (req, file, cb) => {
-        cb(null, `${Date.now().toString()}-${originalname}`)
+        cb(null, `${Date.now().toString()}-${file.originalname}`)
       }
     })
   })
