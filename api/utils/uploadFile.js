@@ -25,10 +25,10 @@ const upload = multer({
       bucket: 'blog-photos-react',
       acl: 'public-read',
       metadata: (req, file, cb) => {
-        cb(null, {fieldName: file.fieldname});
+        cb(null, {fieldName: `foqc_${file.fieldname}`});
       },
       key: (req, file, cb) => {
-        cb(null, Date.now().toString())
+        cb(null, `${Date.now().toString()}-${originalname}`)
       }
     })
   })
