@@ -15,9 +15,9 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3131;
 
-app.use(cors())
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 
 mongoose.Promise = global.Promise;
 mongoose.set('useCreateIndex', true);
