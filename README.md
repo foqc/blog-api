@@ -1,4 +1,4 @@
-# README
+# Blog API
 
 This project is an implementation of JWT auth in NodeJS using the json web token (jwt). This app is a Node API that serves data to a seperate React application, found [here](https://github.com/foqc/redux-learn).
 
